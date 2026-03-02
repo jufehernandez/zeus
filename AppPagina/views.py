@@ -20,3 +20,6 @@ def servicios(request):
 
 def contacto(request):
     return render(request, 'paginas/contacto.html')
+
+def estudiantes(request):
+    return render(request, 'estudiantes/index.html')

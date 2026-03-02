@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+
+{% block titulo %}Asistencia{% endblock %}
+
+{% block contenido %}
+    <h1 style="color: #ff006e;">Asistencia</h1>
+    <hr>
+    <p>Este es el sistema de asistencias</p>
+    <!-- ========== Start Section ========== -->
+    <!-- bs5-card-head-foot -->
+    <!-- ========== End Section ========== -->
+    
+    <div class="card">
+        <div class="card-header">Listado de Estudiantes</div>
+        <div class="card-body">
+            <h4 class="card-title">Estudiantes</h4>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">Añadir</a>
+            
+            <div
+                class="table-responsive"
+            >
+                <table
+                    class="table table-primary"
+                >
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Clase</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">01</td>
+                            <td>Juan</td>
+                            <td>Hernandez</td>
+                            <td></td>
+                            <td>Tecnica</td>
+                            <td><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a></td>
+                        </tr>
+                        <tr class="">
+                            <td scope="row">02</td>
+                            <td>Maria</td>
+                            <td>Calisto</td>
+                            <td></td>
+                            <td>Ingles</td>
+                            <td><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div class="card-footer text-muted">Footer</div>
+    </div>
+    
+{% endblock %}
+
+{% block pie %} Asistencia - Foot {% endblock %}
