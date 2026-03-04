@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block titulo %}Crear{% endblock %}
+
+{% block contenido %}
+    <h1 style="color: #00ff00;">Añadir estudiante</h1>
+    <hr>
+    <div class="card">
+        <div class="card-header">Formulario</div>
+        <div class="card-body">
+            <h4 class="card-title">Datos estudiante</h4>
+            <p class="card-text">Text</p>
+            {% include "estudiantes/formulario.html" %}
+        </div>
+        <div class="card-footer text-muted">Footer</div>
+    </div>
+    <a name="" id="" class="btn btn-success" href={% url "estudiantes" %} role="button">Añadir</a>
+{% endblock %}
+
+{% block pie %} Crear - Foot {% endblock %}

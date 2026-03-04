@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block titulo %}Ediar datos{% endblock %}
+
+{% block contenido %}
+    <h1 style="color: #fffb00;">Editar datos</h1>
+    <hr>
+        <div class="card">
+        <div class="card-header">Formulario</div>
+        <div class="card-body">
+            <h4 class="card-title">Datos estudiante</h4>
+            <p class="card-text">Text</p>
+            {% include "estudiantes/formulario.html" %}
+        </div>
+        <div class="card-footer text-muted">Footer</div>
+    </div>
+{% endblock %}
+
+{% block pie %} Edicion - Foot {% endblock %}

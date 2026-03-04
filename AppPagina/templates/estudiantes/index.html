@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load static %}
 
 {% block titulo %}Asistencia{% endblock %}
 
@@ -15,13 +16,14 @@
         <div class="card-header">Listado de Estudiantes</div>
         <div class="card-body">
             <h4 class="card-title">Estudiantes</h4>
-            <a name="" id="" class="btn btn-primary" href="#" role="button">Añadir</a>
+            
             
             <div
                 class="table-responsive"
             >
+            <a name="anadir" id="anadir" class="btn btn-success " href={% url "crear" %} role="button">Añadir</a>
                 <table
-                    class="table table-primary"
+                    class="table table-light"
                 >
                     <thead>
                         <tr>
@@ -38,23 +40,24 @@
                             <td scope="row">01</td>
                             <td>Juan</td>
                             <td>Hernandez</td>
-                            <td></td>
+                            <td><img src={% static 'App\img\1.png' %} alt=""></td>
                             <td>Tecnica</td>
-                            <td><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a></td>
+                            <td>{% include "estudiantes/buttons.html" %}</td>
                         </tr>
                         <tr class="">
                             <td scope="row">02</td>
                             <td>Maria</td>
                             <td>Calisto</td>
-                            <td></td>
+                            <td><img src={% static 'App\img\2.jpg' %} alt=""></td>
                             <td>Ingles</td>
-                            <td><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a><a name="" id="" class="btn btn-primary" href="#" role="button">Editar</a></td>
+                            <td>{% include "estudiantes/buttons.html" %}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
+        <a name="anadir" id="anadir" class="btn btn-success " href={% url "crear" %} role="button">Añadir</a>    
         </div>
+        
         <div class="card-footer text-muted">Footer</div>
     </div>
     

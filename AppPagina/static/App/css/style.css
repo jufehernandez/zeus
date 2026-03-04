@@ -1,0 +1,24 @@
+
+anadir {
+    --bs-btn-bg: green;
+    --bs-btn-border-color: green;
+}
+
+editar {
+    --bs-btn-color: #dc3545;
+    --bs-btn-bg: yellow;
+    --bs-btn-border-color: yellow;
+    --bs-btn-hover-bg: white;
+    --bs-btn-hover-border-color: yellow;
+
+}
+
+eliminar {
+    --bs-btn-bg: red;
+    --bs-btn-border-color: red;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+}
