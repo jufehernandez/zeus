@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-
+from .models import Estudiantes
 from django.shortcuts import render
+
 
 # Create your views here.
 def saludo(request):
@@ -22,7 +23,11 @@ def contacto(request):
     return render(request, 'paginas/contacto.html')
 
 def estudiantes(request):
-    return render(request, 'estudiantes/index.html')
+    estudiantes = Estudiantes.objects.all()
+    data={
+    'estudiantes':estudiantes
+    }
+    return render(request, 'estudiantes/index.html', data)
 
 def crear(request):
     return render(request, 'estudiantes/crear.html')

@@ -9,3 +9,6 @@ class Estudiantes (models.Model):
     clase = models.TextField(verbose_name="Clase", null=True)
     def __str__(self):
         return self.nombre +" " + self.apellido
+    def delete(self, using = None, keep_parents = False):
+        self.foto.delete(self.foto.name)
+        super().delete
