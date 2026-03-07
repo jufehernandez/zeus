@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from .models import Estudiantes
 from django.shortcuts import render
-
+from .forms import EstudiantesForm
 
 # Create your views here.
 def saludo(request):
@@ -30,7 +30,10 @@ def estudiantes(request):
     return render(request, 'estudiantes/index.html', data)
 
 def crear(request):
-    return render(request, 'estudiantes/crear.html')
+    formulario = EstudiantesForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+    return render(request, 'estudiantes/crear.html', {'formulario':formulario})
 
 def editar(request):
     return render(request, 'estudiantes/editar.html')

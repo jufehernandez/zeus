@@ -1,21 +1,11 @@
-<div class="mb-3">
-    <label for="" class="form-label">Nombre:</label>
-    <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"/>
-    <small id="helpId" class="text-muted">Nombres completos</small>
-    <br>
-    <label for="" class="form-label">Apellido:</label>
-    <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"/>
-    <small id="helpId" class="text-muted">Apellidos completos</small>
-    <br>
-    <label for="" class="form-label">Foto:</label>
-    <input type="file" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"/>
-    <small id="helpId" class="text-muted">Foto</small>
-    <br>
-    <label for="" class="form-label">Clase:</label>
-    <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"/>
-    <small id="helpId" class="text-muted">Clase del estudiante</small>
-    <br>
-</div>
+<form enctype="multipart/form-data" method="POST">
+{% csrf_token %}
+{% for campo in formulario %}
 
-<a name="" id="" class="btn btn-primary" href={% url "estudiantes" %} role="button">Volver</a>
-
+    <div class="mb-3">
+        <label for="" class="form-label">{{ campo.label }}</label>
+        <input type="{{campo.field.widget.input_type}}" name="{{ campo.name }}" id="" class="form-control" placeholder="{{ campo.label }}" aria-describedby="helpId"/>
+    </div>
+{% endfor %}
+<input name="" id=""class="btn btn-success" type="submit" value="Enviar"/> <a name="" id="" class="btn btn-warning" href="{% url 'estudiantes' %}" role="button">Cancelar</a>
+</form>
