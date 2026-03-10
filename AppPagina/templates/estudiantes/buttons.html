@@ -1,1 +1,8 @@
-<div><a name="" id="editar" class="btn btn-warning " href={% url "editar" %} role="button">Editar</a><a name="" id="eliminar" class="btn btn-danger" href="#" role="button">Eliminar</a></div>
+<div class="d-flex gap-2">
+    <a id="editar" class="btn btn-warning" href="{% url 'editar' estudiante.id %}" role="button">Editar</a>
+
+    <form action="{% url 'eliminar' estudiante.id %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button id="eliminar" type="submit" class="btn btn-danger">Eliminar</button>
+    </form>
+</div>

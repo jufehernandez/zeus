@@ -35,18 +35,18 @@
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {% for Estudiantes in estudiantes %}
-                        <tr class="">
-                            <td scope="row">{{Estudiantes.id}}</td>
-                            <td>{{Estudiantes.nombre}}</td>
-                            <td>{{Estudiantes.apellido}}</td>
-                            <td><img src="{{Estudiantes.foto.url}}" alt="Foto de {{Estudiantes.nombre}}" width="100" height="100"></td>
-                            <td>{{Estudiantes.clase}}</td>
-                            <td>{% include "estudiantes/buttons.html" %}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
+<tbody>
+    {% for estudiante in estudiantes %}
+    <tr>
+        <td scope="row">{{ estudiante.id }}</td>
+        <td>{{ estudiante.nombre }}</td>
+        <td>{{ estudiante.apellido }}</td>
+        <td><img src="{{ estudiante.foto.url }}" alt="Foto de {{ estudiante.nombre }}" width="100" height="100"></td>
+        <td>{{ estudiante.clase }}</td>
+        <td>{% include "estudiantes/buttons.html" with estudiante=estudiante %}</td>
+    </tr>
+    {% endfor %}
+</tbody>
                 </table>
             </div>
         <a name="anadir" id="anadir" class="btn btn-success " href={% url "crear" %} role="button">Añadir</a>    
