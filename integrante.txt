@@ -1,0 +1,2 @@
+mi nombre es diego villamarin
+aprendi el manejo de git hub para empresas tambien los usos de push y pullrequest merged el uso de colaboradores.
